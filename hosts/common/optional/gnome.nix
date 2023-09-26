@@ -1,20 +1,12 @@
 {
   services = {
     xserver = {
-      enable = true;
-      displayManager = {
-        gdm = {
-          enable = true;
-          autoSuspend = false;
-        };
-      };
       desktopManager = {
         gnome.enable = true;
       };
       layout = "us";
       xkbVariant = "";
     };
-    logind.lidSwitch = "ignore";
   };
   security.polkit.extraConfig = ''
     polkit.addRule(function(action, subject) {

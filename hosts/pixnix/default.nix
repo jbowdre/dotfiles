@@ -9,11 +9,13 @@
     ../common/users/john
 
     ../common/optional/docker.nix
-    ../common/optional/gnome.nix
+    #../common/optional/gnome.nix
+    # ../common/optional/hyprland.nix
     ../common/optional/libvirtd.nix
     ../common/optional/pipewire.nix
     ../common/optional/printing.nix
     ../common/optional/sshd.nix
+    ../common/optional/xserver.nix
   ];
 
   networking = {
