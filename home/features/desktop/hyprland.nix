@@ -5,6 +5,14 @@
     bind = $mod, F, exec, firefox
     bind = , Print, exec, grimblast copy area
     bind = $mod, Q, exec, kitty
+    bind = $mod, C, killactive,
+    bind = $mod, M, exit
+
+    input {
+      touchpad {
+        natural_scroll = yes
+      }
+    }
 
     # workspaces
     # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
