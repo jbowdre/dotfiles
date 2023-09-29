@@ -5,6 +5,11 @@
   # - https://github.com/Misterio77/nix-starter-configs/
   # - https://github.com/Misterio77/nix-config/
 
+  nixConfig = {
+    extra-substituters = ["https://hyprland.cachix.org"];
+    extra-trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     # You can access packages and modules from different nixpkgs revs
@@ -24,6 +29,16 @@
     # Firefox add-ons
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Hyprland
+    hyprland = {
+      url = "github:hyprwm/hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprwm-contrib = {
+      url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
