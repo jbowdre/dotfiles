@@ -77,11 +77,7 @@
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@pixnix" = lib.homeManagerConfiguration {
-          modules = [ 
-            ./home/pixnix.nix 
-            hyprland.homeManagerModules.default
-            {wayland.windowManager.hyprland.enable = true;}
-          ];
+          modules = [ ./home/pixnix.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
