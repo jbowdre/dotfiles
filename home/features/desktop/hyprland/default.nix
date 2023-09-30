@@ -24,10 +24,6 @@
         gaps_out = 20;
         border_size = 2.7;
         cursor_inactive_timeout = 4;
-        "col.active_border" = "0xff${config.colorscheme.colors.base0C}";
-        "col.inactive_border" = "0xff${config.colorscheme.colors.base02}";
-        "col.group_border_active" = "0xff${config.colorscheme.colors.base0B}";
-        "col.group_border" = "0xff${config.colorscheme.colors.base04}";
       };
       input = {
         kb_layout = "br,us";

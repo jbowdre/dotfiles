@@ -27,7 +27,7 @@
     dconf.enable = true;
   };
 
-  servies.logind = {
+  services.logind = {
     lidSwitch = "suspend";
     lidSwitchExternalPower = "lock";
   };
