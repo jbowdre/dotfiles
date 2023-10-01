@@ -22,6 +22,11 @@
     networkmanager.enable = true;
   };
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
+
   system.stateVersion = "23.05";
 
 }

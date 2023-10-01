@@ -3,6 +3,10 @@
     # See https://wiki.hyprland.org/Configuring/Keywords/ for more
     $mainMod = SUPER
 
+    # Alt-Tab action
+    bind = ALT, Tab, cyclenext,
+    bind = ALT, Tab, bringactivetotop,
+
     # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
     bind = $mainMod, Q, exec, kitty
     bind = $mainMod, C, killactive,

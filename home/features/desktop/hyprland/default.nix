@@ -2,14 +2,16 @@
 
   imports = [
     ./binds.nix
+    # ./systemd-fixes.nix
+    ./tty-init.nix
     ../wayland-wm
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
-    xwayland.enable = true;
-    recommendedEnvironment = true;
+#    xwayland.enable = true;
+#    recommendedEnvironment = true;
     extraConfig = ''
       # This is an example Hyprland config file.
       #
