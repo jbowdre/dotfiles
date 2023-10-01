@@ -9,7 +9,7 @@
     ../common/users/john
 
     ../common/optional/docker.nix
-    #../common/optional/greetd.nix
+    ../common/optional/greetd.nix
     ../common/optional/hyprland.nix
     ../common/optional/libvirtd.nix
     ../common/optional/pipewire.nix

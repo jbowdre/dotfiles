@@ -6,7 +6,6 @@
   ];
 
   home.packages = with pkgs; [
-    kitty
     obsidian
     qFlipper
   ];
