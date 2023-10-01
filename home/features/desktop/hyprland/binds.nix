@@ -8,6 +8,7 @@
     bind = $mainMod, C, killactive,
     bind = $mainMod, M, exit,
     bind = $mainMod, E, exec, dolphin
+    bind = $mainMod, F, exec, firefox
     bind = $mainMod, V, togglefloating,
     bind = $mainMod, R, exec, wofi --show drun
     bind = $mainMod, P, pseudo, # dwindle

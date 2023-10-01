@@ -2,11 +2,14 @@
 
   imports = [
     ./binds.nix
+    ../wayland-wm
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
+    xwayland.enable = true;
+    recommendedEnvironment = true;
     extraConfig = ''
       # This is an example Hyprland config file.
       #
@@ -18,7 +21,11 @@
       #
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
-      monitor=,preferred,auto,auto
+      monitor=eDP-1,2400x1600,auto,1.5
+
+      xwayland {
+        force_zero_scaling = true
+      }
 
 
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
@@ -43,7 +50,8 @@
           follow_mouse = 1
 
           touchpad {
-              natural_scroll = false
+              natural_scroll = true
+              clickfinger_behavior = true
           }
 
           sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
@@ -52,8 +60,8 @@
       general {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-          gaps_in = 5
-          gaps_out = 20
+          gaps_in = 2
+          gaps_out = 6
           border_size = 2
           col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
           col.inactive_border = rgba(595959aa)
@@ -67,7 +75,7 @@
       decoration {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-          rounding = 10
+          rounding = 6
 
           blur {
               enabled = true
@@ -109,7 +117,8 @@
 
       gestures {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
-          workspace_swipe = false
+          workspace_swipe = true
+
       }
 
       # Example per-device config
@@ -125,5 +134,10 @@
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
     '';
+  };
+
+  # VSCode scaling fix
+  programs.vscode.userSettings = {
+    "window.zoomLevel" =  2;
   };
 }
