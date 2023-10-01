@@ -2,7 +2,7 @@
 
   imports = [
     ./binds.nix
-    # ./systemd-fixes.nix
+    ./systemd-fixes.nix
     ./tty-init.nix
     ../wayland-wm
   ];
