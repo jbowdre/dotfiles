@@ -1,7 +1,8 @@
 { pkgs, ... }: {
   imports = [
-    ./mako.nix
     ./kitty.nix
+    ./mako.nix
+    ./waybar.nix
   ];
 
   xdg.mimeApps.enable = true;
